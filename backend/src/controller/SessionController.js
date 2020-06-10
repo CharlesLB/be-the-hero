@@ -1,23 +1,20 @@
-
 // ─── IMPORT ─────────────────────────────────────────────────────────────────────
 
-const connection = require('../database/connection');
-
+const connection = require("../database/connection");
 
 // ─── CODE ───────────────────────────────────────────────────────────────────────
 
 module.exports = {
-    async create ( request , response ){
+    async create(request, response) {
         const { id } = request.body;
-    
-        const ong = await connection('ongs')
-            .where('id' , id )
-            .select('name')
-            .first()
 
-        if ( !ong ){
-            return response.status(400).json({ error: "There's no ONG with that ID "});
+        const ong = await connection("ongs").where("id", id).select("name").first();
+
+        if (!ong) {
+            return response
+                .status(400)
+                .json({ error: "There's no ONG with that ID " });
         }
-        return response.json( ong );
-    }
-}
+        return response.json(ong);
+    },
+};
