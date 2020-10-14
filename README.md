@@ -25,6 +25,7 @@ O <strong>Be-The-Hero</strong> é uma aplicação Web e Mobile para ajudar ONG's
 O projeto foi desenvolvido utilizando as seguintes tecnologias
 
 - [Node.js](https://nodejs.org/en/)
+    - [Knex](http://knexjs.org)
 - [ReactJS](https://reactjs.org/)
 - [React Native](https://reactnative.dev/)
     - [Expo](https://docs.expo.io)
